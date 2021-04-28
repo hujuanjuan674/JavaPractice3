@@ -27,7 +27,6 @@ public class Bank {
             return interest;
         }
     }
-
     public static class CommercialBank extends Bank{
         double year;
         public double computerInterest(){
@@ -42,6 +41,7 @@ public class Bank {
         }
 
     }
+
 
     public static class BankOfDalian extends Bank {
             double year;
@@ -76,6 +76,8 @@ public class Bank {
             bank3.year = 8.236;
             bank3.setInterestRate(0.035);
             double interest3 = bank3.computerInterest();
+
+            System.out.printf("三个银行利息相差%f元\n",interest3-interest2,interest3-interest1,interest2-interest1);
         }
     }
 }
