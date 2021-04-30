@@ -2,6 +2,8 @@ package practice.polymorphism;
 
 import think.polymorphism.music.Note;
 
+import static net.mindview.util.Print.*;
+
 class Cycle {
     public static void main(String args[]){
 

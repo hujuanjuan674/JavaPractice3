@@ -1,6 +1,8 @@
 //继承及向上转型
 package practice.polymorphism.music;
 
+import think.polymorphism.music.Note;
+
 public class Music {
     public static <Instrument> void tune(Instrument i){
 
