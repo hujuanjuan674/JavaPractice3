@@ -4,7 +4,10 @@ import think.polymorphism.music.Note;
 
 public class Music3 {
     public static void tune(Instrument i){
+
         i.play(Note.B_FLAT);
+        i.what();
+        i.adjust();
     }
     public static void tuneAll(Instrument e[]){
         for(Instrument i:e){
