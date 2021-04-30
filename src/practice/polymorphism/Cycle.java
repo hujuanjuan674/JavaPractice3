@@ -2,32 +2,41 @@ package practice.polymorphism;
 
 import think.polymorphism.music.Note;
 
-import static net.mindview.util.Print.print;
-
 class Cycle {
+    public static void main(String args[]){
 
-    public void ride(Note n){
-        print("Cycle.ride()");
     }
 
-    public enum Bycycle{
-        MIDDLE_C,C_SHARP,B_FLAT;
+    public void play(Note n) {
+
+        System.out.println("Cycle");
     }
 
-    static class Tricycle extends Cycle{
-         //重写接口方法
-        public void ride(Note n) {
-            System.out.println("Tricycle.ride()"+n);
+    public static void wheels() {
+        System.out.println("4");
+    }
+
+    public class Bycycle extends Cycle {
+        public void play(Note n) {
+
+            System.out.println("Tricycle");
         }
     }
-//继承及向上转型
-    public static class Unicycle {
-        public static void tune(Cycle i){
-            i.ride(Note.MIDDLE_C);
+
+    public class Tricycle extends Cycle {
+        //重写接口方法
+        public void play(Note n) {
+
+            System.out.println("Tricycle");
         }
-        public static void main(String args[]){
-            Tricycle flute=new Tricycle();
-            tune(flute);//向上转型i
+    }
+
+    //继承及向上转型
+    public class Unicycle extends Cycle {
+        public void play(Note n) {
+            System.out.println("Unicycle");
+
         }
     }
 }
+
